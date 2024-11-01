@@ -1,5 +1,7 @@
 # Property-Friends Real Estate Model Deployment
 
+<img src="Property-Friends-logo.png" alt="Property-Friends Logo" width="50%">
+
 ## Overview
 
 This project is designed to productivize a model that predicts residential property values in Chile. Using Docker, FastAPI, Redis, and MLflow, the solution provides a scalable, deployable API for real estate valuation based on given property features. The project also supports running in a production environment with essential security and logging mechanisms.
@@ -227,6 +229,11 @@ The FastAPI instance auto-generates API documentation, available at:
 These documents provide endpoints, parameters, and example requests for each API route.
 
 ---
+
+## Assumptions & Future Improvements
+
+In this section, we outline assumptions made during the development of the ML pipeline and provide suggestions for future improvements.
+
 
 ### Assumptions
 
