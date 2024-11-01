@@ -123,3 +123,4 @@ logs/
 *db_data/
 *.csv
 deployments/
+*Challenge.md

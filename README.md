@@ -223,8 +223,6 @@ The FastAPI instance auto-generates API documentation, available at:
 
 These documents provide endpoints, parameters, and example requests for each API route.
 
-Here’s an improved and more detailed explanation for assumptions, current data source handling, and future improvements:
-
 ---
 
 ### Assumptions
@@ -263,8 +261,6 @@ To enhance the robustness and flexibility of the ML pipeline, consider implement
    ```
 
 4. **Feature Engineering Pipeline**: Expand the pipeline to include feature engineering steps, such as one-hot encoding for categorical variables, scaling for continuous variables, and automated feature selection. This step would improve the model's predictive power and ensure a more robust feature set.
-
-Here’s an extended and detailed list of future improvements, including your existing points with additional details:
 
 ---
 
