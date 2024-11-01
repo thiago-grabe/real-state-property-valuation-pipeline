@@ -1,0 +1,7 @@
+deployments/
+tests/
+*.csv
+*.md
+*.gitignore
+.vscode
+.venv

@@ -1,0 +1,13 @@
+category_encoders
+python-dotenv~=1.0.1
+fastapi
+httpx~=0.27.2
+ipykernel
+mlflow~=2.17
+pydantic-settings~=2.6.0
+scikit-learn~=1.5.2
+requests
+redis~=5.2.0
+uvicorn~=0.32.0
+pytest~=8.2.2
+rq~=2.0
