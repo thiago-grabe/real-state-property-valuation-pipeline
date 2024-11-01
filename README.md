@@ -35,13 +35,16 @@ The project is organized as follows:
 │   │   └── __init__.py
 │   ├── database
 │   │   ├── db.py                    # Database connection management
-│   │   ├── train.csv                # Training data (for local testing)
-│   │   └── test.csv                 # Test data (for local testing)
+│   │   ├── train.csv                # Training data
+│   │   └── test.csv                 # Test data
 │   └── validator.py                 # API key validation
 ├── Dockerfile                       # Dockerfile for API server and worker
 ├── docker-compose.yaml              # Docker Compose file
 └── .env                             # Environment variables 
 ```
+
+**Notes:**
+- `train.csv` and `test.csv` for this project are hidden due to privacy concerns. They should be available at the project repository under the `database` directory.
 
 ## Technologies Used
 
