@@ -66,7 +66,18 @@ To set up the project locally, follow these steps:
     cd property-friends-real-estate
     ```
 
-2. **Set Environment Variables**:
+
+2. **Add Train and Test Data**:
+   Since the `train.csv` and `test.csv` files are not included in the repository for privacy reasons, ensure they are available locally. Place these files in the `database` directory within the project, as shown below:
+
+   ```
+   property-friends-real-estate/database/train.csv
+   property-friends-real-estate/database/test.csv
+   ```
+
+
+This will make sure the project has the necessary data files.
+3. **Set Environment Variables**:
    Configure a `.env` file in the root of the project with the following variables (details in [Environment Variables](#environment-variables)):
 
    ```env
@@ -92,7 +103,7 @@ To set up the project locally, follow these steps:
     API_KEY=any-api-key-you-want
    ```
 
-3. **Build and Start the Containers**:
+4. **Build and Start the Containers**:
    Ensure Docker is running, then execute:
 
    ```bash
@@ -105,7 +116,7 @@ To set up the project locally, follow these steps:
    - **Redis and Redis Queue**
    - **FastAPI for serving predictions and training tasks**
 
-4. **Verify Setup**:
+5. **Verify Setup**:
    Once containers are up, check the logs or access:
    - FastAPI at `http://localhost:8000`
    - MLflow tracking server at `http://localhost:5000`
