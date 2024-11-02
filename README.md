@@ -234,80 +234,78 @@ API_KEY=any-api-key-you-want           # The API key used to access the ML model
    ```json
    POST http://localhost:8000/predict
    {
-     "model_name": "property_friends_best_model",
-     "features": [
+      "model_name": "property_friends_best_model",
+      "features": [
          {
-             "type": "casa",
-             "sector": "lo barnechea",
-             "net_usable_area": 300.0,
-             "net_area": 500.0,
-             "n_rooms": 6.0,
-             "n_bathroom": 5.0,
-             "latitude": -33.3561,
-             "longitude": -70.5072
+               "type": "casa",
+               "sector": "lo barnechea",
+               "net_usable_area": 300.0,
+               "net_area": 500.0,
+               "n_rooms": 6.0,
+               "n_bathroom": 5.0,
+               "latitude": -33.3561,
+               "longitude": -70.5072
          }
-     ]
+      ]
    }
-
-   Request with multiple inputs:
-
+   ```
    ```json
    POST http://localhost:8000/predict
    {
-   "model_name": "property_friends_best_model",
-   "features": [
-      {
-         "type": "casa",
-         "sector": "lo barnechea",
-         "net_usable_area": 300.0,
-         "net_area": 500.0,
-         "n_rooms": 6.0,
-         "n_bathroom": 5.0,
-         "latitude": -33.3561,
-         "longitude": -70.5072
-      },
-      {
-         "type": "departamento",
-         "sector": "las condes",
-         "net_usable_area": 120.0,
-         "net_area": 150.0,
-         "n_rooms": 3.0,
-         "n_bathroom": 2.0,
-         "latitude": -33.411,
-         "longitude": -70.5697
-      },
-      {
-         "type": "casa",
-         "sector": "la reina",
-         "net_usable_area": 250.0,
-         "net_area": 400.0,
-         "n_rooms": 5.0,
-         "n_bathroom": 3.0,
-         "latitude": -33.4375,
-         "longitude": -70.5499
-      },
-      {
-         "type": "departamento",
-         "sector": "providencia",
-         "net_usable_area": 80.0,
-         "net_area": 120.0,
-         "n_rooms": 2.0,
-         "n_bathroom": 2.0,
-         "latitude": -33.425,
-         "longitude": -70.609
-      },
-      {
-         "type": "casa",
-         "sector": "vitacura",
-         "net_usable_area": 200.0,
-         "net_area": 300.0,
-         "n_rooms": 4.0,
-         "n_bathroom": 3.0,
-         "latitude": -33.4049,
-         "longitude": -70.5945
+      "model_name": "property_friends_best_model",
+      "features": [
+         {
+            "type": "casa",
+            "sector": "lo barnechea",
+            "net_usable_area": 300.0,
+            "net_area": 500.0,
+            "n_rooms": 6.0,
+            "n_bathroom": 5.0,
+            "latitude": -33.3561,
+            "longitude": -70.5072
+         },
+         {
+            "type": "departamento",
+            "sector": "las condes",
+            "net_usable_area": 120.0,
+            "net_area": 150.0,
+            "n_rooms": 3.0,
+            "n_bathroom": 2.0,
+            "latitude": -33.411,
+            "longitude": -70.5697
+         },
+         {
+            "type": "casa",
+            "sector": "la reina",
+            "net_usable_area": 250.0,
+            "net_area": 400.0,
+            "n_rooms": 5.0,
+            "n_bathroom": 3.0,
+            "latitude": -33.4375,
+            "longitude": -70.5499
+         },
+         {
+            "type": "departamento",
+            "sector": "providencia",
+            "net_usable_area": 80.0,
+            "net_area": 120.0,
+            "n_rooms": 2.0,
+            "n_bathroom": 2.0,
+            "latitude": -33.425,
+            "longitude": -70.609
+         },
+         {
+            "type": "casa",
+            "sector": "vitacura",
+            "net_usable_area": 200.0,
+            "net_area": 300.0,
+            "n_rooms": 4.0,
+            "n_bathroom": 3.0,
+            "latitude": -33.4049,
+            "longitude": -70.5945
+         }
+      ]
       }
-   ]
-   }
    ```
 
 ## API Documentation
