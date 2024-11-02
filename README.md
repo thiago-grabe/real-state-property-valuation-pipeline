@@ -76,7 +76,7 @@ To set up the project locally, follow these steps:
    ```
    
    This will make sure the project has the necessary data files.
-   
+
 3. **Set Environment Variables**:
    Configure a `.env` file in the root of the project with the following variables (details in [Environment Variables](#environment-variables)):
 
@@ -209,8 +209,27 @@ API_KEY=any-api-key-you-want           # The API key used to access the ML model
    }
    ```
 
-5. **Make Predictions**:
-   Request predictions from the deployed model:
+5. **Deploy the Best Model**:
+   Register the best-performing model from an experiment as a production model. Send a POST request to `/deploy` with the experiment details and desired model registration configuration. This example assumes the metric `mse` is minimized to select the best model:
+
+   ```json
+   POST http://localhost:8000/deploy
+   {
+     "experiment_config": {
+         "experiment_name": "Property-Friends-Experiment",
+         "model_name": "property_friends_best_model",
+         "metric": "mse",
+         "metric_goal": "min"
+     }
+   }
+   ```
+
+   **Response**:
+   - Returns details of the registered production model, including the experiment name, best run ID, best metric value, and the URI of the model artifact in the MLflow Model Registry.
+
+
+6. **Make Predictions**:
+   Request predictions from the deployed model with a single input. Example:
 
    ```json
    POST http://localhost:8000/predict
@@ -228,6 +247,66 @@ API_KEY=any-api-key-you-want           # The API key used to access the ML model
              "longitude": -70.5072
          }
      ]
+   }
+
+   Request with multiple inputs:
+
+   ```json
+   POST http://localhost:8000/predict
+   {
+   "model_name": "property_friends_best_model",
+   "features": [
+      {
+         "type": "casa",
+         "sector": "lo barnechea",
+         "net_usable_area": 300.0,
+         "net_area": 500.0,
+         "n_rooms": 6.0,
+         "n_bathroom": 5.0,
+         "latitude": -33.3561,
+         "longitude": -70.5072
+      },
+      {
+         "type": "departamento",
+         "sector": "las condes",
+         "net_usable_area": 120.0,
+         "net_area": 150.0,
+         "n_rooms": 3.0,
+         "n_bathroom": 2.0,
+         "latitude": -33.411,
+         "longitude": -70.5697
+      },
+      {
+         "type": "casa",
+         "sector": "la reina",
+         "net_usable_area": 250.0,
+         "net_area": 400.0,
+         "n_rooms": 5.0,
+         "n_bathroom": 3.0,
+         "latitude": -33.4375,
+         "longitude": -70.5499
+      },
+      {
+         "type": "departamento",
+         "sector": "providencia",
+         "net_usable_area": 80.0,
+         "net_area": 120.0,
+         "n_rooms": 2.0,
+         "n_bathroom": 2.0,
+         "latitude": -33.425,
+         "longitude": -70.609
+      },
+      {
+         "type": "casa",
+         "sector": "vitacura",
+         "net_usable_area": 200.0,
+         "net_area": 300.0,
+         "n_rooms": 4.0,
+         "n_bathroom": 3.0,
+         "latitude": -33.4049,
+         "longitude": -70.5945
+      }
+   ]
    }
    ```
 
