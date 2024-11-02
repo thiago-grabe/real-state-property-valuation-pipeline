@@ -74,9 +74,9 @@ To set up the project locally, follow these steps:
    property-friends-real-estate/database/train.csv
    property-friends-real-estate/database/test.csv
    ```
-
-
-This will make sure the project has the necessary data files.
+   
+   This will make sure the project has the necessary data files.
+   
 3. **Set Environment Variables**:
    Configure a `.env` file in the root of the project with the following variables (details in [Environment Variables](#environment-variables)):
 
